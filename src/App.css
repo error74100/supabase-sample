@@ -1,38 +1,264 @@
-.App {
+@font-face {
+  font-family: 'Ownglyph_UNZ-Rg';
+  src: url(/public/Ownglyph_UNZ-Rg.woff2) format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+div,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+body * {
+  box-sizing: border-box;
+  font-family: 'Ownglyph_UNZ-Rg';
+}
+
+.h2_type {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.form-label {
+  font-weight: bold;
+}
+
+.tc {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.tl {
+  text-align: left;
+}
+.tr {
+  text-align: right;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#root {
+  padding-bottom: 80px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* header */
+.header_desc {
+  margin: 0;
+}
+
+.form_box {
+  margin: 20px 0 0 0;
+  padding: 20px 20px 50px 20px;
+  background-color: #cdedf7;
+  border-radius: 10px;
+}
+
+.form_box .h2_type {
+  padding: 20px 0 20px;
+}
+
+.login_signup {
+  margin: 20px 0 0 0;
+  padding: 20px 0 0 0;
+  border-top: 1px solid #ddd;
+}
+
+.login_signup a {
+  color: #ea7b36;
+  font-weight: bold;
+}
+
+.list_wrap {
+  padding: 50px 0;
+}
+
+.list_wrap .group {
   display: flex;
-  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: 15px 0;
+}
+
+.list_wrap .group .people {
+  text-align: center;
+  width: 100px;
+  padding: 0 20px 0 0;
+  word-break: break-all;
+}
+
+.list_wrap .group .people span {
+  display: block;
+  height: 80px;
+  background-color: #ddd;
+  border-radius: 50%;
+  background-image: url(/public/profile_img02.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.list_wrap .group .people b {
+  display: block;
+  line-height: 1;
+  padding: 5px 0 0 0;
+}
+
+.list_wrap .group .content {
+  position: relative;
+  width: auto;
+  max-width: calc(100% - 15rem);
+  padding: 15px;
+  background-color: #b37f7f;
+  border-radius: 20px;
+}
+
+.list_wrap .group .content .btn_wrap button {
+  padding: 2px 15px;
+}
+
+.list_wrap .group .content .btn_wrap button ~ button {
+  margin-left: 5px;
+}
+
+.list_wrap .group .content:before {
+  content: '';
+  display: block;
+  clear: both;
+  position: absolute;
+  left: -10px;
+  top: 30px;
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 10px solid #b37f7f;
+}
+
+.list_wrap .group .content p {
+  font-size: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+.list_wrap .group .content .title {
+  font-size: 22px;
+  word-break: break-word;
+}
+
+.list_wrap .group .content .title textarea {
+  border: none;
+  border-radius: 5px;
+  height: 6rem;
+  background-color: rgba(255, 255, 255, 0.8);
+  resize: none;
+}
+
+.list_wrap .group .content .date {
+  font-size: 1rem;
+  padding: 5px 0 0 0;
+}
+
+/* type2 */
+.list_wrap .group.type2 {
+  justify-content: flex-end;
+}
+
+.list_wrap .group.type2 .people {
+  order: 2;
+  padding: 0 0 0 20px;
+}
+
+.list_wrap .group.type2 .people span {
+  background-image: url(/public/profile_img01.png);
+}
+
+.list_wrap .group.type2 .content {
+  order: 1;
+  text-align: right;
+  background-color: #9ab37f;
+}
+
+.list_wrap .group.type2 .content:before {
+  left: initial;
+  right: -10px;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 10px solid #9ab37f;
+  border-right: initial;
+}
+
+/* write */
+.write_wrap {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 80px;
+  background-color: #ddd;
+}
+
+.write_wrap.default_type {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.write_wrap .inner {
+  display: flex;
+  padding: 10px;
+}
+
+.write_wrap.default_type .inner {
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 100%;
+  font-size: 1.2rem;
+  color: #fff;
 }
 
-.App-link {
-  color: #61dafb;
+.write_wrap .inner textarea {
+  flex: 1;
+  height: 60px;
+  border: none;
+  border-radius: 5px;
+  margin: 0 10px 0 0;
+  padding: 5px;
+  resize: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.write_wrap .inner button {
+  width: 90px;
+  color: #fff;
+  font-size: 18px;
+  white-space: nowrap;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  background-color: #3ed1d6;
+}
+
+/* mypage */
+.nickname_wrap .form-label button {
+  padding: 2px 10px;
+  margin: 0 0 0 5px;
+}
+
+.not_found {
+  margin: 100px 0 0 0;
+  text-align: center;
+  border: 5px solid #ddd;
+  padding: 50px;
+}
+
+@media (max-width: 480px) {
+  .list_wrap .group .content {
+    max-width: calc(100% - 7rem);
   }
 }
