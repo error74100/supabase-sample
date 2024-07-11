@@ -20,6 +20,7 @@ function Home({ user }) {
   const [datas, setDatas] = useState();
 
   const mainUser = process.env.REACT_APP_MAIN_USER;
+  const subUser = process.env.REACT_APP_SUB_USER;
 
   const modifySaveEvent = (id) => {
     const getItem = document
@@ -111,6 +112,20 @@ function Home({ user }) {
     fetchData();
   };
 
+  const userImg = (email) => {
+    let className = '';
+
+    if (email === mainUser) {
+      className = 'p_jh';
+    } else if (email === subUser) {
+      className = 'p_jw';
+    } else {
+      className = '';
+    }
+
+    return className;
+  };
+
   useEffect(() => {
     fetchData();
   }, []);
@@ -142,7 +157,8 @@ function Home({ user }) {
                       id={item.id}
                     >
                       <div className="people">
-                        <span></span>
+                        <span className={userImg(item.Email)}></span>
+
                         <b>{item.nickname}</b>
                       </div>
                       <div className="content">

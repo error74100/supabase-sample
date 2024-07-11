@@ -101,11 +101,20 @@ body * {
   height: 80px;
   background-color: #ddd;
   border-radius: 50%;
-  background-image: url(/public/profile_img02.png);
+  background-image: url(/public/profile_img00.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+.list_wrap .group .people span.p_jh {
+  background-image: url(/public/profile_img_jh.png);
+}
+
+.list_wrap .group .people span.p_jw {
+  background-image: url(/public/profile_img_jw.png);
+}
+
 .list_wrap .group .people b {
   display: block;
   line-height: 1;
@@ -175,10 +184,6 @@ body * {
 .list_wrap .group.type2 .people {
   order: 2;
   padding: 0 0 0 20px;
-}
-
-.list_wrap .group.type2 .people span {
-  background-image: url(/public/profile_img01.png);
 }
 
 .list_wrap .group.type2 .content {
