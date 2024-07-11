@@ -52,6 +52,11 @@ body * {
 }
 
 /* header */
+.header_col {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
 .header_desc {
   margin: 0;
 }

@@ -20,10 +20,12 @@ function Header({ user }) {
     <>
       <Container>
         <Row>
-          <Col>
+          <Col className="header_col">
             <Stack direction="horizontal" gap={3}>
               <div className="p-2">
-                <Link to="/">Logo</Link>
+                <Link to="/" className="logo">
+                  <img src="/logo.png" alt="logo" />
+                </Link>
               </div>
               {!user ? (
                 <div className="p-2 ms-auto">
